@@ -1,0 +1,63 @@
+.group:before,.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* IE6&7 */
+}
+
+body{
+  background: #ffffff url("../images/Arctic.jpg") no-repeat;
+  background-size: cover;
+  font-family: Helvetica, Verdana, sans-serif;
+  text-align: center; 
+}
+h1{
+  color: #b34700;
+
+}
+.picky{
+  font-style: italic;
+}
+
+.game{
+  margin: 50px 0 0 0;
+}
+
+.gameover{
+  float: bottom;
+  padding: 5px;
+  margin: 5px;
+}
+
+.speech{
+  position: relative;
+  content: "Penguin that you are feeding";
+  background: url("../images/hungrypenguinlogo1.png") no-repeat; 
+  height: 300px;
+  width: 300px;
+  color:#990099;
+  display: table;
+  margin: 50px auto;
+}
+
+.penguintalk{
+  display: table-cell;
+  position: absolute
+  margin: 0 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.speech:hover{
+  content: "This penguin is now happy!";
+  background: url("../images/happy-feet-300.jpg") no-repeat;
+  color: #ff0000;
+}
+
+
+
