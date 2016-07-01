@@ -23,6 +23,11 @@ h1{
   font-style: italic;
 }
 
+.previousGuesses{
+  color: #dd3344;
+  font-size: 150%;
+}
+
 .game{
   margin: 50px 0 0 0;
 }
@@ -55,8 +60,18 @@ h1{
 
 .speech:hover{
   content: "This penguin is now happy!";
-  background: url("../images/happy-feet-300.jpg") no-repeat;
+  background: url("../images/happy-feet.jpg") no-repeat;
   color: #ff0000;
+  background-position: -200px -100px;
+}
+
+.test{
+  width: 300px;
+  text-align: center;
+}
+
+.my-img{
+  width:100%;
 }
 
 
