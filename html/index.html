@@ -2,6 +2,8 @@
   <html>
     <head>
       <link rel="stylesheet" type="text/css" href="../css/main.css">
+      <script src="../js/jquery-3.0.0.js"></script>
+      <script src="../js/guessingGame.js"></script>
     </head>
     
 
@@ -12,21 +14,16 @@
         <p class="penguintalk group">"I'm Hungry!"</p>
       </div>
       <form class="game">
-        # Fish to feed: <input type="text" name="fish guess" id="fish guess">
-        <input class="guess" type="submit" value="Feed Him!">
+        # Fish to feed: <input type="text" name="fish guess" id="fish-guess">
+        <input class="guess" type="button" value="Feed Him!">
       </form>
       <p class="previousGuesses">Previous Guesses Go Here</p>
       <form class="gameover">
-        <input class="retry" type="submit" value="Retry Game?">
-        <input class="newAmount" type="submit" value="Retry with New Amount">
-        <input class="quit" type="submit" value="Starve the penguin (quit)">
+        <input class="retry" type="button" value="Retry Game?">
+        <input class="newAmount" type="button" value="Retry with New Amount">
+        <input class="quit" type="button" value="Starve the penguin (quit)">
       </form>
 
-      <!-- Testing Image Sizing
-      <div class="test">
-        <img class="my-img" src="../images/happy-feet.jpg">
-      </div>
-      -->
 
     </body>
 
