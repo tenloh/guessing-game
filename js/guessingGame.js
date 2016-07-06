@@ -4,6 +4,8 @@
 var playersGuess,
     winningNumber
 
+var guessArray = [];
+
 
 
 /* **** Guessing Game Functions **** */
@@ -35,11 +37,15 @@ function lowerOrHigher(){
 function checkGuess(){
   // Check to see if the player's guess is equal to winning number
   var checkResult = (winningNumber === playersGuess) ? true : false;
-  console.log("Check Result: " + checkResult);
   if(checkResult){
-    $(this).closest('.speech').find('.penguintalk').text("YUM!!");
+    $('.penguintalk').text("YUM!!");
   } else {
-    $(this).closest('.speech').find('.penguintalk').text("Oooh that's not right! Try again!");
+    if(guessArray.indexOf(playersGuess) == -1){
+      guessArray.push(playersGuess);
+      $('.penguintalk').text("Oooh that's not right! Try again!");
+    } else {
+      $('.penguintalk').text("You've already tried to give me that many!");
+    }
   }
 }
 
