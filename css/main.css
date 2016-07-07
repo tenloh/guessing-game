@@ -23,9 +23,15 @@ h1{
   font-style: italic;
 }
 
-.previousGuesses{
-  color: #dd3344;
+.guessMessage{
+  color: #00ea0b;
   font-size: 150%;
+}
+
+.guessHint{
+  color: #00ea0b;
+  font-size: 150%;
+  display: none;
 }
 
 .game{
@@ -58,11 +64,16 @@ h1{
 }
 
 
-.speech:hover{
-  content: "This penguin is now happy!";
+.speech.win{
   background: url("../images/happy-feet.jpg") no-repeat;
   color: #ff0000;
   background-position: -200px -100px;
+}
+
+.speech.lose{
+  background: url("../images/Angry_Penguin.svg") no-repeat;
+  color: #ff0000;
+  background-position: -100px -50px;
 }
 
 .test{
