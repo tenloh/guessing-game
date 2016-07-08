@@ -70,6 +70,14 @@ h1{
   background-position: -200px -100px;
 }
 
+.penguintalk.win{
+  font-size: 300%;
+}
+
+.penguintalk.lose{
+  font-size: 150%;
+}
+
 .speech.lose{
   background: url("../images/Angry_Penguin.svg") no-repeat;
   color: #ff0000;

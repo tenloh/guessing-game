@@ -52,21 +52,18 @@
     //Remove guess
     $('#fish-guess').val("");
     if(checkResult){ //If win
-      $('.penguintalk').text("YUM!!");
-      $('.guessMessage').text("Who needs hints when you've got it on the dot.");
       winState();
     } else {
       $('.guessMessage').text("" + lowerOrHigher() + " "  + coldOrWarm()); 
       if(guessArray.indexOf(playersGuess) == -1){
         guessArray.push(playersGuess);
         if(guessArray.length == 5){
-          $('.penguintalk').text("I'm too hungry now, I'm going to look on my own! (You've lost)");
           loseState();
         } else {
-          $('.penguintalk').text("Oooh that's not right! Try again! " + (5 - guessArray.length) + " guesses left!");
+          $('.penguintalk').text("That's not right! " + (5 - guessArray.length) + " guesses left!");
         }
       } else {
-        $('.penguintalk').text("You've already tried to give me that many!");
+        $('.penguintalk').text("You tried that...");
       }
     }
   }
@@ -104,16 +101,34 @@
     $('.guessMessage').text("Look Here For Clues!");
     $('.speech').removeClass('win');
     $('.speech').removeClass('lose');
+    $('.penguintalk').removeClass('win');
+    $('.penguintalk').removeClass('lose');
+    $('.retry').val('Retry Game?');
+    $('#fish-guess').prop("readonly", false);
+    $('.game').show();
+
   }
 
   //Set Winning State
     function winState(){
       $('.speech').addClass('win');
+      $('.penguintalk').addClass('win');
+      $('.penguintalk').text("YUM!!");
+      $('.guessMessage').text("Who Needs Hints When You're Amazing!");
+      $('#fish-guess').prop("readonly", true);
+      $('.game').fadeOut("slow");
     }
 
   //Set Losing State
     function loseState(){
+      $('.penguintalk').text("HANGRY!!");
       $('.speech').addClass('lose');
+      $('.penguintalk').addClass('lose');
+      $('.retry').val('Try Again?');
+      $('.hint').hide();
+      $('.guessMessage').text('Why dont you try again?');
+      $('#fish-guess').prop("readonly", true);
+      $('.game').fadeOut("slow");
     }
   /** Game Starts **/
   winningNumber = generateWinningNumber(); // Generate Initial Winning Number
